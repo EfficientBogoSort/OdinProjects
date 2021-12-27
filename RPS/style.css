@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+*{
+    color: white;
+}
+
+
+:root{
+    --purple: #a3f;
+    --choiceDisplay: rgb(7, 51, 196);
+    --choiceHover: rgb(5, 214, 5);
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    border-width: 10px;
+    width: 800px;
+}
+.title{
+    font-size: 70px;
+    font-family: 'Architects Daughter', cursive;
+    animation: pulsate 1.5s ease-in-out infinite alternate;
+    margin: 25px;
+    border: 0.2rem solid white;
+    padding: 0.7rem 25px;
+    border-radius: 10px;
+    box-shadow:
+    0 0 .2rem white,
+    0 0 .2rem white,
+    0 0 0.8rem #bc13fe,
+    0 0 3rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+    width: 800px;
+    text-align: center;
+}
+
+.main{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+@keyframes pulsate {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      /* Larger blur radius */
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px var(--purple),
+        0 0 80px var(--purple),
+        0 0 90px var(--purple),
+        0 0 100px var(--purple),
+        0 0 150px var(--purple),
+        0 0 180px var(--purple),
+        0 0 200px var(--purple),
+        0 0 220px var(--purple);
+    }
+   0% {
+      /* A slightly smaller blur radius */
+      text-shadow:none;
+    }
+}
+
+.choice{
+    background-color: black;
+    border-color: white;
+    border-radius: 10px;
+    width: 160px;
+    height: 150px;
+    font-size: 40px;
+    text-shadow:
+    0 0 2px var(--choiceDisplay),
+    0 0 10px var(--choiceDisplay),
+    0 0 20px var(--choiceDisplay),
+    0 0 40px var(--choiceDisplay),
+    0 0 80px var(--choiceDisplay),
+    0 0 160px var(--choiceDisplay);
+    box-shadow:     0 0 .2rem white,
+    0 0 .2rem white,
+    0 0 0.8rem var(--choiceDisplay),
+    0 0 2.8rem var(--choiceDisplay),
+    inset 0 0 1.3rem var(--choiceDisplay);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.choice:hover{
+    text-shadow:
+    0 0 20px var(--choiceHover),
+    0 0 40px var(--choiceHover),
+    0 0 80px var(--choiceHover);
+    box-shadow:     0 0 .2rem white,
+    0 0 .2rem white,
+    0 0 0.8rem var(--choiceHover),
+    0 0 2.8rem var(--choiceHover),
+    inset 0 0 1.3rem var(--choiceHover);
+}
+
+.ground{
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+}
+
+.restart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    border: white 0.125em solid;
+    background-color: none;
+    padding: .25em 1em;
+    border-radius: .3   em;
+    text-shadow: 
+    0 0 2px white,
+    0 0 4px white,
+    0 0 10px red,
+    0 0 20px red,
+    0 0 40px red,
+    0 0 80px red,
+    0 0 120px red,
+    0 0 150px red;
+    box-shadow:     
+    0 0 .2rem white,
+    0 0 .2rem white,
+    0 0 0.8rem red,
+    0 0 2.8rem red,
+    inset 0 0 1.3rem red;
+}
