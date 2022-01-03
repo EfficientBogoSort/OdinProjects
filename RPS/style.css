@@ -10,7 +10,7 @@
     --choiceDisplay: rgb(7, 51, 196);
     --choiceHover: rgb(5, 214, 5);
 }
-.options{
+#options{
     display: flex;
     justify-content: space-between;
     border-width: 10px;

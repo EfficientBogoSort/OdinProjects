@@ -1,3 +1,9 @@
+const announcer = document.getElementById("announcer");
+const restart_button = document.getElementById("restart-button");
+const options = document.getElementById("options");
+
+
+
 function computerPlay(){
     let max = 2, min = 0;
     let possiblePlays = ["Rock", "Paper", "Scissors"];
@@ -32,9 +38,15 @@ function capitaliseFirst(word){
 let playerScore = 0, compScore = 0;
 
 function setScores(){
-    document.getElementById("score-box").innerHTML = `${playerScore} - ${compScore}`;
+    document.getElementById("score-box").textContent = `${playerScore} - ${compScore}`;
 }
 
+for (let i = 0; i < options.children.length; ++i){
+    const child = options.children[i];
+    child.addEventListener('click', function(){
+        makePlay(this.textContent);
+    });
+}
 function makePlay(choice){
     if (finished){
         return;
@@ -46,46 +58,39 @@ function makePlay(choice){
     let winner = decideWinner(choice, compChoice);
     if (winner === 1){
         playerScore++;
-        changeAnnoncer(`You Win! ${choice} beats ${compChoice}`);
+        announcer.textContent = `You Win! ${choice} beats ${compChoice}`;
     } else if (winner === 0){
         compScore++;
-        changeAnnoncer(`You Lose! ${compChoice} beats ${choice}`);
+        announcer.textContent = `You Lose! ${compChoice} beats ${choice}`;
     } else if (winner === -1){
-        document.getElementById("announcer").innerHTML = "It's a Draw";
+        announcer.textContent = "It's a Draw";
     } else{
-        document.getElementById("announcer").innerHTML = winner;
+        announcer.textContent = winner;
     }
     setScores();
     if (playerScore > 4 || compScore > 4){
         finished = true;
         if (playerScore > 4){
-            changeAnnoncer("You have won the match! Congratulations");
+            announcer.textContent = "You have won the match! Congratulations";
         } else{
-            changeAnnoncer("You have lost the match. Better luck next time");
+            announcer.textContent = "You have lost the match. Better luck next time";
         }
-        document.getElementById("restart-button").innerHTML = "Play Again";
+        restart_button.textContent = "Play Again";
         return;
     }
 }
 
 function showChoice(player, choice){
-    document.getElementById(player).innerHTML = choice;
-}
-
-function changeAnnoncer(msg){
-    document.getElementById("announcer").innerHTML = msg;
+    document.getElementById(player).textContent = choice;
 }
 
 function restartGame(){
     playerScore = 0;
     compScore = 0;
-    setInitialMsg();
+    announcer.textContent = "Choose your hand by clicking one of the three buttons at the bottom";
     setScores();
     finished = false;
-    document.getElementById("restart-button").innerHTML = "Restart Game";
+    restart_button.textContent = "Restart Game";
 }
 
-function setInitialMsg(){
-    changeAnnoncer("Choose your hand by clicking one of the three buttons at the bottom");
-}
 window.onload = restartGame(); 
