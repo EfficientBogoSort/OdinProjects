@@ -1,0 +1,41 @@
+:root {
+    --tot-size: 480px;
+    --size: 16;
+}
+
+
+#board {
+    display: flex;
+    flex-direction: column;
+}
+
+#grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+html{
+    height: 100%;
+}
+
+#gridSize {
+    height: 1rem;
+}
+
+.size {
+    display: flex;
+    flex-direction: column;
+}
