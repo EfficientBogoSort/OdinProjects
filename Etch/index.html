@@ -8,10 +8,27 @@
     </head>
     <body>
             <div id="board">
-                <div class="size">
-                    <input id="gridSize">
-                    <input id="slider" type="range" min="2" max="100">
+                
+                <h1>Etch-A-Sketch</h1>
+                <div id="options">
+                    <div class="colorOpts">
+                        <div id="custColCont">
+                            <input type="color" id="custCol" value='#FFA500'>
+                        </div>
+                        <button id='custColButt' class="colButt">Custom</button>
+                        <button id='randColButt' class="colButt">Random</button>
+                        <button id='blackButt' class="colButt">Black</button>
+                        <button id='gradButt' class="colButt">Gradient</button>
+                    </div>
+                    <div class="opt">
+                        <div class="size">
+                            <input id="gridSize">
+                            <input id="slider" type="range" min="2" max="100">
+                        </div>
+                        <button id='clear'>Clear</button>
+                    </div>
                 </div>
+
             </div>
     </body>
 </html>
