@@ -64,6 +64,23 @@ clearButton.addEventListener("click", ()=>{
     }
 })
 
+function component2Hex(c){
+    let hex = c.toString(16);
+    return hex.length == 1 ? '0'+hex : hex;
+}
+
+function shade(col){
+    let r = parseInt(col.slice(1,3), 16),
+        g = parseInt(col.slice(3,5), 16),
+        b = parseInt(col.slice(5,7), 16);
+    r -= Math.floor((r / 10.0));
+    g -= Math.floor((g / 10.0));
+    b -= Math.floor((b / 10.0));
+    return '#' + component2Hex(r )+ component2Hex(g) + component2Hex(b);
+}
+
+
+
 function updtColButt(butt){
     for (let i = 0; i < allColButts.length; ++i){
         if (allColButts[i].id !== butt.id){
@@ -82,6 +99,8 @@ function swtichMode(butt){
     }
     updtColButt(butt);
 }
+
+
 
 function resizeSq(){
     let squares = document.getElementsByClassName("sq");
@@ -111,7 +130,9 @@ function updateCol(){
         getRandomColor();
     } else if (mode['blackButt']){
         currColor = '#000';
-    } 
+    } else if (mode['gradButt']){
+        currColor = shade(currColor);
+    }
 }
 
 function createGrid(n=16){
