@@ -5,11 +5,16 @@
         <title>Etch a Sketch</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet">
+
     </head>
     <body>
             <div id="board">
                 
-                <h1>Etch-A-Sketch</h1>
+                <h1 class="name">Etch-A-Sketch</h1>
                 <div id="options">
                     <div class="colorOpts">
                         <div id="custColCont">
@@ -22,6 +27,7 @@
                     </div>
                     <div class="opt">
                         <div class="size">
+                            <a id="sizeMess">Grid Size</a>
                             <input id="gridSize">
                             <input id="slider" type="range" min="2" max="100">
                         </div>

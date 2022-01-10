@@ -16,7 +16,8 @@ body{
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-top: 50px;
+    padding-top: 10px;
+    background-color: #192038;
 }
 html{
     height: 100%;
@@ -62,8 +63,8 @@ html{
 .colButt{
     width: 100px;
     height: 50px;
-    border-radius: 5%;
     border: 2px;
+    font-family: 'Righteous', cursive;
 }
 #custCol{
     opacity: 0%;
@@ -77,4 +78,65 @@ html{
 }
 #custColCont{
     box-shadow: 0 0 3px black;
+}
+
+.size{
+    height: 90%;
+}
+
+#sizeMess{
+    color: white;
+}
+
+#sizeMess, #clear{
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: bold;
+}
+
+#clear {
+    width: 100%;
+    height: 10%;
+    border-style: none;
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: bold;
+}
+#clear:hover{
+    background: #b50b22;
+}
+#gridSize{
+    height: 10%;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+#slider{
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background: rebeccapurple;
+
+}
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #ff4500;
+    box-shadow: 0 0 2px 0 #555;
+
+}
+
+.colButt, #gridSize, #clear{
+    border-radius: 5px;
+}
+
+.opt {
+    width: 100px;
+}
+.colButt:hover{
+    transform: scale(1.1);
+}
+
+.name{
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 60px;
 }

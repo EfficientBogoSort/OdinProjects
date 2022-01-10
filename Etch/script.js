@@ -9,6 +9,7 @@ let randColButt = document.getElementById('randColButt');
 let blackButt = document.getElementById('blackButt');
 let gradButt = document.getElementById('gradButt');
 
+const allColButts = [custColButt, randColButt, blackButt, gradButt];
 
 
 const BOARD_WIDTH = 480;
@@ -17,23 +18,23 @@ let coloring = false;
 let defaultSize = 16;
 
 let mode = {
-    'cust': false,
-    'rand': false,
-    'black': true,
-    'grad': false
+    'custColButt': false,
+    'randColButt': false,
+    'blackButt': true,
+    'gradButt': false
 }
 
 custColButt.addEventListener('click', function(){
-    swtichMode('cust');
+    swtichMode(this);
 });
 randColButt.addEventListener('click', function(){
-    swtichMode('rand');
+    swtichMode(this);
 });
 blackButt.addEventListener('click', function(){
-    swtichMode('black');
+    swtichMode(this);
 });
 gradButt.addEventListener('click', function(){
-    swtichMode('grad');
+    swtichMode(this);
 });
 
 // only readjust the grid once the user has decided on a value
@@ -63,14 +64,23 @@ clearButton.addEventListener("click", ()=>{
     }
 })
 
-function swtichMode(colMode){
-    console.log("A");
-    mode[colMode] = true;
+function updtColButt(butt){
+    for (let i = 0; i < allColButts.length; ++i){
+        if (allColButts[i].id !== butt.id){
+            allColButts[i].style.backgroundColor = '#FFFFFF';
+        } 
+    }
+    butt.style.backgroundColor = '#0dd427';
+}
+
+function swtichMode(butt){
+    mode[butt.id] = true;
     for (let key in mode){
-        if (key !== colMode){
+        if (key !== butt.id){
             mode[key] = false;
         }
     }
+    updtColButt(butt);
 }
 
 function resizeSq(){
@@ -95,11 +105,11 @@ function colorSq(sq){
 }
 
 function updateCol(){
-    if (mode['cust']){
+    if (mode['custColButt']){
         currColor = custCol.value
-    } else if (mode['rand']){
+    } else if (mode['randColButt']){
         getRandomColor();
-    } else if (mode['black']){
+    } else if (mode['blackButt']){
         currColor = '#000';
     } 
 }
@@ -115,6 +125,7 @@ function createGrid(n=16){
         row.classList.add("row")
         for (let j = 0; j < n;++j){
             let tmp = document.createElement("div");
+            tmp.style.backgroundColor = '#FFFFFF';
             tmp.classList.add("sq");
             tmp.addEventListener("mousedown", function(e){
                 coloring = true;
@@ -149,6 +160,7 @@ window.onload = function(){
         rows[i].style.width = `${BOARD_WIDTH}px`;
     }
     resizeSq();
+    updtColButt(blackButt);
 }
 
 
