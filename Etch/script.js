@@ -13,7 +13,7 @@ const allColButts = [custColButt, randColButt, blackButt, gradButt];
 
 
 const BOARD_WIDTH = 480;
-let currColor = "#000";
+let currColor = "#000000";
 let coloring = false;
 let defaultSize = 16;
 
