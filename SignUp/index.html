@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="image">
+            <img src="front.jpg" alt="City image" id="frontImg">
+            <div id="logoCont">
+                <img src="coffee.png" alt="Cup of coffee image" id="logoImg">
+                <span id="logoText">Beans</span>
+            </div>
+            <p id="credits">Photo by <a href="https://unsplash.com/@malteesimo">Malte Schmidt</a> on <a href="https://unsplash.com">Unsplash</a></p>
+        </div>
+        <div id="boxes">
+            <div id="text">
+                <p id="topText">
+                    This is not a real online service! You know you need something
+                    like this in your life to help you realize your deepest dreams.
+                    <br>Sign up <em>now</em> to get started
+                </p>
+                <p id="bottomText">You <em>know</em> you want to</p>
+            </div>
+            <form action="#" method="post" id="signUp">
+                <div id="formBg">
+                    <legend>Let's do this!</legend>
+                    <div id="fields">
+                        <div id="pair">
+                            <div class="field">
+                                <label for="firstName" class="inp">First Name</label>
+                                <input type="text" id="firstName" class="inp box">
+                            </div>
+                            <div class="field">
+                                <label for="lasttName" class="inp">Last Name</label>
+                                <input type="text" id="lastName" class="inp box">
+                            </div>
+                        </div>
+                        <div id="pair">
+                            <div class="field">
+                                <label for="email" class="inp">Email</label>
+                                <input type="email" id="email" class="inp box">
+                            </div>
+                            <div class="field">
+                                <label for="phone" class="inp">Phone Number</label>
+                                <input type="tel" id="phone" class="inp box">
+                            </div>
+                        </div>
+                        <div id="pair">
+                            <div class="field">
+                                <label for="password" class="inp">Password</label>
+                                <input type="password" id="password" class="inp box">
+                            </div>
+                            <div class="field">
+                                <label for="confirm" class="inp">Confirm Password</label>
+                                <input type="password" id="confirm" class="inp box">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="submit">Create Account</button>
+            </form>
+            <p id="logIn">Already have an account? <a href="#" id="loginLink">Log in</a></p>
+        </div>
+    </div>
+</body>
+</html>

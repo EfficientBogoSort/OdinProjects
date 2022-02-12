@@ -1,0 +1,130 @@
+:root{
+    --left-space: 5%;
+    --space-between: 30px;
+    --img-prop: 35%;
+}
+* {
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    
+}
+#main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+#image {
+    width: var(--img-prop);
+    height: 100vh;
+    position: relative;
+}
+#boxes{
+    width: calc(100% - var(--img-prop));
+    /*background-color: #021f25;*/
+    background-image: linear-gradient(#2a4e66, #515c5f, #00191d);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#id, #boxes {
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+#logoCont{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 20vh;
+    bottom: 62.8vh;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#text{
+    width: 75%;
+    margin-bottom: 5%;
+}
+
+legend{
+    margin-bottom: var(--space-between);
+
+}
+#text, legend{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#signUp {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-between);
+    align-items: flex-start;
+}
+
+#fields{
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    white-space: nowrap;
+    gap: calc(var(--space-between)/2);
+}
+.field{
+    display: inline-block;
+    width: 50%;
+}
+.inp{
+    display: block;
+    width: 80%;
+}
+.box{
+    margin-top: 5px;
+}
+
+legend, #fields, #submit, #text, #logIn{
+    margin-left: var(--left-space);
+}
+#formBg{
+    background-color: rgba(31, 54, 61, .3);
+    padding-top: var(--space-between);
+    padding-bottom: var(--space-between);
+}
+
+#formBg, #signUp{
+    width: 100%;
+}
+#frontImg{
+    width: 100%;
+    max-height: 100%;
+}
+#credits{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: rgba(256, 256, 256, .5);
+    width: 100%;
+
+}
+#tmp{
+    filter: blur(10px);
+}
+label{
+    color: #e8ae59;
+    font-weight: 700;
+}
+#loginLink{
+    color: orangered;
+    font-weight:bolder;
+    text-decoration: none;
+}
+#logoImg{
+    width: 30%;
+    height: 100%;
+}
+#logoText{
+    font-size: 60px;
+    font-weight: bolder;
+}
