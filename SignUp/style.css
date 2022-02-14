@@ -130,6 +130,33 @@ label{
 }
 
 input.inp{
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 600;
+    background-color: #657275;
+    border: none;
+    font-weight: bolder;
+    font-size: 16px;
+}
+input.inp:hover{
+    background-color: #79898d;
+}
+#submit{
+    background-color: #be8641;
+    border: none;
+    color: black;
+    font-weight: bolder;
+}
+#submit:hover{
+    cursor: pointer;
+    background-color: #e9701f;
+}
+input.inp, #submit{
+    border-radius: 5px;;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #657275 inset !important;
+    -webkit-text-fill-color: white;
 }
