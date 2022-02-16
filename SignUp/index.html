@@ -36,31 +36,36 @@
                         <div id="pair">
                             <div class="field">
                                 <label for="firstName" class="inp">First Name</label>
-                                <input type="text" id="firstName" class="inp box">
+                                <input type="text" id="firstName" class="inp box" placeholder="Eg: John">
                             </div>
                             <div class="field">
                                 <label for="lasttName" class="inp">Last Name</label>
-                                <input type="text" id="lastName" class="inp box">
+                                <input type="text" id="lastName" class="inp box" placeholder="Eg: Smith">
                             </div>
                         </div>
                         <div id="pair">
                             <div class="field">
-                                <label for="email" class="inp">Email</label>
-                                <input type="email" id="email" class="inp box">
+                                <label for="email" class="inp error">Email</label>
+                                <input type="email" id="email" class="inp box error" placeholder="Eg: johnsmith@outlook.com">
+                                <div class="errorCont" data-error="Please provide a vaid email address"></div>
                             </div>
                             <div class="field">
-                                <label for="phone" class="inp">Phone Number</label>
-                                <input type="tel" id="phone" class="inp box">
+                                <label for="phone" class="inp error">Phone Number</label>
+                                <input type="tel" id="phone" class="inp box" placeholder="Eg: 123456789">
+                                <div class="errorCont" data-error="Please provide a vaid phone number"></div>
                             </div>
                         </div>
                         <div id="pair">
                             <div class="field">
                                 <label for="password" class="inp">Password</label>
-                                <input type="password" id="password" class="inp box">
+                                <input type="password" id="password" class="inp box error" placeholder="Must be at least 5 characters long" pattern=".{5,}">
+                                <div class="errorCont" data-error="Please provide a vaid password"></div>
+                                
                             </div>
                             <div class="field">
                                 <label for="confirm" class="inp">Confirm Password</label>
-                                <input type="password" id="confirm" class="inp box">
+                                <input type="password" id="confirm" class="inp box error" placeholder="Must be identical to chosen password" pattern=".{5,}">
+                                <div class="errorCont" data-error="Please provide a vaid password"></div>
                             </div>
                         </div>
                     </div>

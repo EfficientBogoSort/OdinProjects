@@ -160,3 +160,22 @@ input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px #657275 inset !important;
     -webkit-text-fill-color: white;
 }
+
+input.inp::placeholder{
+    color: rgb(175, 170, 170);
+}
+input.inp:invalid:not(:placeholder-shown), input.inp:valid:not(:placeholder-shown){
+    border: .5px solid;
+    outline: none;
+}
+input.inp:valid:not(:placeholder-shown){
+    border-color: green;
+}
+.error:invalid:not(:placeholder-shown){
+    border-color: red;
+}
+.error:invalid + div.errorCont::after{
+    content:attr(data-error);
+    color: rgb(243, 69, 69);
+    font-weight: bolder;
+}
