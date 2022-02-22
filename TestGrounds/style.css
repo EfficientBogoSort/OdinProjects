@@ -1,35 +1,138 @@
-html {
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 4px;
+    text-align: center;
+
+  }
+  
+  .container div {
+    padding: 15px;
+    font-size: 32px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .header {
+    background-color: #393f4d;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  .logo {
+      justify-self: start;
+      align-self: center;
+  }
+  
+  .menu {
+    align-self: center;
+  }
+  
+  .menu ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .menu ul,
+  .menu li {
+    font-size: 16px;
+    list-style-type: none;
+  }
+  
+  .sidebar {
+    background-color: #FF7755;
+    grid-row: 2 / span 2;
+    gap: 50px;
+    display: grid;
+  }
+  
+  .sidebar .photo {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 10px;
+  }
+  
+  .photo  {
+      display: grid;
+      align-items: center;
+  }
+  
+  .sidebar .side-content {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    align-items: center;
+    display: grid;;
+  }
+  
+  .nav {
+    background-color: #FF7755;
+  }
+  
+  .nav ul {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr );
+      place-items: center center;
+  }
+  
+  .nav ul li {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .article {
+    background-color: #bccbde;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .article p {
+    font-size: 18px;
     font-family: sans-serif;
+    color: white;
+    text-align: left;
   }
   
-  table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200,200,200);
-    letter-spacing: 1px;
-    font-size: 0.8rem;
+  .article .card {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+    height: 200px;
   }
   
-  td, th {
-    border: 1px solid rgb(190,190,190);
-    padding: 10px 20px;
+  .card p {
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 5px;
   }
   
-  th {
-    background-color: rgb(235,235,235);
-  }
-  
-  td {
+  .card .title {
+    font-size: 18px;
     text-align: center;
   }
   
-  tr:nth-child(even) td {
-    background-color: rgb(250,250,250);
+  .footer {
+    background-color: #393f4d;
+    grid-column: 1 / -1;
   }
   
-  tr:nth-child(odd) td {
-    background-color: rgb(245,245,245);
+  .footer p {
+    font-size: 13px;
+    font-weight: normal;  
   }
+
   
-  caption {
-    padding: 10px;
-  }

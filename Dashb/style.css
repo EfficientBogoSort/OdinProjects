@@ -1,0 +1,63 @@
+body, html{
+    padding: 0;
+    margin: 0;
+}
+
+#mainCont{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    height: 100vh;
+}
+#sidebar{
+    background-color: red;
+    display: grid;
+    gap: 30px;
+    grid-template-rows: auto 1fr 1fr;
+}
+#board{
+    background-color: blue;
+    display: grid;
+    grid-template-rows: 2fr 8fr;
+}
+#topBar{
+    background-color: green;
+    display: grid;
+    grid-template: 1fr 2fr / 2fr 1fr;
+}
+.lined{
+    border: thin solid black;
+}
+#boardCont{
+    display: grid;
+    grid-template-columns: 7.5fr 2.5fr;
+    padding: 10px;
+    
+}
+#projectsContent{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+#projects{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+#sections, #userAssist{
+    display: grid;
+    grid-auto-rows: 1em;
+    gap: 10px;
+}
+
+#others{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}
+#announcements, #trendings{
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+#announcementsContent, #trendingsContent{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
