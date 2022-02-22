@@ -10,8 +10,8 @@
 <body>
     <div id="mainCont">
         <div id="sidebar">
-             <p id="pageTitle" class="lined">Dashboard</p>
-             <div id="sections" class="lined">
+             <p id="pageTitle"> <img src="images/monitor-small.svg" alt=""> Dashboard</p>
+             <div id="sections">
                  <div class="section">Home</div>
                  <div class="section">Profile</div>
                  <div class="section">Messages</div>
@@ -19,7 +19,7 @@
                  <div class="section">Tasks</div>
                  <div class="section">Community</div>
              </div>
-             <div id="userAssist" class="lined">
+             <div id="userAssist">
                  <div class="assist">Settings</div>
                  <div class="assist">Support</div>
                  <div class="assist">Privacy</div>
@@ -27,8 +27,21 @@
         </div>
         <div id="board">
             <div id="topBar">
-                <div class="topSect lined"></div>
-                <div class="topSect lined"></div>
+                <div id="searchBar">
+                    <label for="bar"><img src="images/magnify.svg" alt="magnifying glass image"></label>
+                    <input type="search" id="bar">
+                </div>
+                <div id="profileSect">
+                    <button id="notif">
+                        <img src="images/bell.svg" alt="Bell image" id="notifIcon">
+                    </button>
+                    <button id="profile">
+                        <img src="images/pfp.jpg" alt="Person image" id="profPic">
+                    </button>
+                    <p>John Smith</p>
+                    
+
+                </div>
                 <div class="topSect lined"></div>
                 <div class="topSect lined"></div>
             </div>
