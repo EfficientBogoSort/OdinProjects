@@ -19,19 +19,20 @@ body, html{
 #board{
     background-color: blue;
     display: grid;
-    grid-template-rows: 2fr 8fr;
+    grid-template-rows: 1fr 4fr;
 }
 #topBar{
     background-color: green;
     display: grid;
-    grid-template: 1fr 2fr / 2fr 1fr;
+    grid-template: 1fr 100px / 2fr 1fr;
+    padding-left: 20px;
 }
 .lined{
     border: thin solid black;
 }
 #boardCont{
     display: grid;
-    grid-template-columns: 7.5fr 2.5fr;
+    grid-template-columns: 3fr 1fr;
     padding: 10px;
     
 }
@@ -73,11 +74,14 @@ body, html{
     grid-template-columns: auto 1fr;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    
 }
+
 #bar{
     border-radius: 20px;
     padding-left: 1.5%;
+    outline: none;
+    border: none;
 }
 #notif, #profile{
     background: none;
@@ -104,4 +108,32 @@ body, html{
     grid-template-columns: repeat(3,auto);
     justify-content: center;
     gap:20px;
+}
+
+#info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#profPicBig{
+    height: 70%;
+    width: auto;
+    border-radius: 50%;
+}
+.actionButt{
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    height: 40%;
+    width: 75%;
+}
+.actionButt:hover{
+    cursor: pointer;
+}
+#actions{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+
 }
