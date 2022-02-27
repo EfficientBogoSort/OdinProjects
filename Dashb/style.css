@@ -9,30 +9,27 @@ body, html{
     height: 100vh;
 }
 #sidebar{
-    background-color: red;
+    background-color: #f59e0b;
     display: grid;
     gap: 50px;
     grid-auto-rows: minmax(min-content, max-content);
-    padding-left: 5%;
+    padding-left: 10%;
     font-size: 20px;
 }
 #board{
-    background-color: blue;
+    background-color: #ffedd5;
     display: grid;
     grid-template-rows: auto;
 }
 #topBar{
-    background-color: green;
+    background-color: #fff7ed;
     display: grid;
     grid-template: 1fr 100px / 2fr 1fr;
     padding-left: 20px;
     height: 170px;
     
 }
-.lined{
-    border-top: thin solid black;
-    border-bottom: thin solid black;
-}
+
 #boardCont{
     display: flex;
     
@@ -56,6 +53,8 @@ body, html{
     display: grid;
     grid-auto-rows: 1em;
     gap: 15px;
+    font-weight: bold;
+    font-size: 22px;
 }
 
 #others{
@@ -70,32 +69,37 @@ body, html{
     display: grid;
     grid-template-rows: auto 1fr;
 }
-#announcementsContent{
+#announcementsContent, #trendingsContent{
     padding: 1em 2em;
+    border-radius: 10px;
 }
 #announcementsContent, #trendingsContent{
     display: grid;
     grid-auto-rows: minmax(min-content, max-content);
-    background-color: aqua;
+    background-color: #fff7ed;
 }
 #pageTitle{
-    font-size: 1.5em;
+    font-size: 1.8em;
     display: flex;
     align-items: center;
+    font-weight: bolder;
 }
 #searchBar{
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: center;
     align-items: center;
+    ;
     
 }
 
 #bar{
     border-radius: 20px;
     padding-left: 1.5%;
+    height: 2em;
     outline: none;
     border: none;
+    background-color: #ffedd5;
 }
 #notif, #profile{
     background: none;
@@ -140,6 +144,7 @@ body, html{
     outline: none;
     height: 40%;
     width: 75%;
+    background-color: #d97706;
 }
 .actionButt:hover{
     cursor: pointer;
@@ -152,7 +157,7 @@ body, html{
 
 }
 .card{
-    background-color: blueviolet;
+    background-color: #fff7ed;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -181,3 +186,34 @@ a.assist, a.section{
     text-decoration: none;
     color: black;
 }  
+
+.trending{
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+
+.trendImg{
+    height: 60px;
+    width: auto;
+    border-radius: 100px;
+}
+
+.announcement:not(:first-child):not(:last-child){
+    border-top: thin solid black;
+    border-bottom: thin solid black;
+}
+
+#projectsTitle, #trendingsTitle, #announcementsTitle{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.annTitle{
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+.cardDesc, .annDesc{
+    color: rgb(63, 62, 62);
+}
