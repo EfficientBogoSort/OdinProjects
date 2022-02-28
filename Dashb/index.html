@@ -5,26 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
     <title>Admin Dashboard</title>
 </head>
 <body>
     <div id="mainCont">
         <div id="sidebar">
-             <p id="pageTitle"> <img src="images/monitor-small.svg" alt=""> Dashboard</p>
+             <p id="pageTitle"> <img src="images/monitor-small.svg" alt="" id="titleLogo"> Dashboard</p>
              <div id="sections">
-                 <a href="#" class="section">Home</a>
-                 <a href="#" class="section">Profile</a>
-                 <a href="#" class="section">Messages</a>
-                 <a href="#" class="section">History</a>
-                 <a href="#" class="section">Tasks</a>
-                 <a href="#" class="section">Community</a>
+                 <a href="#" class="section"><img src="images/home.svg" alt="" class="sectLogo"> Home</a>
+                 <a href="#" class="section"><img src="images/prof.svg " alt="" class="sectLogo"> Profile</a>
+                 <a href="#" class="section"><img src="images/message.svg" alt="" class="sectLogo">Messages</a>
+                 <a href="#" class="section"><img src="images/hist.svg" alt="" class="sectLogo">History</a>
+                 <a href="#" class="section"><img src="images/docs.svg" alt="" class="sectLogo">Tasks</a>
+                 <a href="#" class="section"><img src="images/comm.svg" alt="" class="sectLogo">Community</a>
                  
                  
              </div>
              <div id="userAssist">
-                 <a href="#" class="assist">Settings</a>
-                 <a href="#" class="assist">Support</a>
-                 <a href="#" class="assist">Privacy</a>
+                 <a href="#" class="assist"><img src="images/cog.svg" alt="" class="sectLogo">Settings</a>
+                 <a href="#" class="assist"><img src="images/support.svg" alt="" class="sectLogo">Support</a>
+                 <a href="#" class="assist"><img src="images/priv.svg" alt="" class="sectLogo">Privacy</a>
              </div>
         </div>
         <div id="board">
@@ -47,8 +50,8 @@
                 <div id="info">
                     <img src="images/pfp.jpg" alt="Person image" id="profPicBig">
                     <div>
-                        <p>Hi there,</p>
-                        <p>John Smith (@johnSmith)</p>
+                        <p id="greet">Hi there,</p>
+                        <p id="name-tag">John Smith (@johnSmith)</p>
                     </div>
                 </div>
                 <div id="actions">
