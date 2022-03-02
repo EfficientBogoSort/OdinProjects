@@ -1,0 +1,44 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+#mainCont{
+    width: 100vw;
+}
+
+#topBar{
+    display: grid;  
+    height: 100px;
+    grid-template-columns: 2fr 5fr 1fr;
+}
+
+#name{
+    background-color: red;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#libInfo{
+    background-color: blue;
+}
+#addBook{
+    background-color: green;
+}
+
+#colTitle{
+    display: grid;
+    grid-template-columns: 40% 40% 1fr 1fr;
+    padding: 0 2%;
+    align-items: center;
+    justify-items: start;
+    border: thin solid black;
+}
+
+#libInfo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
