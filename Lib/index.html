@@ -9,8 +9,29 @@
 </head>
 <body>
     <div id="mainCont">
+        <div id="addBookCont" class="hidden">
+            <div id="addBookWin">
+                <form action="#" id="addBookForm">
+                    <div>
+                        <input type="text" id="name" placeholder="Book Title">
+                    </div>
+                    <div>
+                        <input type="text" id="author" placeholder="BookAuthor">
+                    </div>
+                    <div>
+                        <label for="readState">Have you read the book?</label>
+                        <input type="checkbox" id="readState" checked>
+                    </div>
+                    <div >
+                        <input type="number" placeholder="Number of Pages Read" min="0" id="pagesRead">
+                    </div>
+                    <button>Submit</button>
+                    
+                </form>
+            </div>
+        </div>
         <div id="topBar">
-            <p id="name">
+            <p id="pageName">
                 iLibrary
             </p>
             <div id="libInfo">
@@ -33,11 +54,15 @@
                 <p>Num Pages</p>
                 <p>Read?</p>
             </div>
-            <div id="bookCont">
-
+            <div class="book">
+                <p>Title</p>
+                <p>Author</p>
+                <p>Num Pages</p>
+                <p>Read?</p>
             </div>
         </div>
     </div>
     
 </body>
+<script src="index.js" defer></script>
 </html>

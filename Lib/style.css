@@ -13,7 +13,7 @@ html, body{
     grid-template-columns: 2fr 5fr 1fr;
 }
 
-#name{
+#pageName{
     background-color: red;
     height: 100%;
     margin: 0;
@@ -28,17 +28,66 @@ html, body{
     background-color: green;
 }
 
-#colTitle{
+#colTitle, .book{
     display: grid;
     grid-template-columns: 40% 40% 1fr 1fr;
     padding: 0 2%;
     align-items: center;
     justify-items: start;
-    border: thin solid black;
+    border-bottom: thin solid black;
 }
 
 #libInfo{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+#addBookWin{
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    animation-name: slideUp;
+    animation-duration: .6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shown{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+
+#addBookCont{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, .4);
+    position: fixed;
+    z-index: 1;
+}
+@keyframes slideUp{
+    from{top: 50%; opacity: 0;}
+    to{top: 25%; opacity: 1;}
+}
+
+input[type="text"], input[type="number"]{
+    width: 100%;
+}
+#addBookForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form>div{
+    width: 50%;
+}
+input[type="number"]:disabled{
+    background-color: grey;
 }
