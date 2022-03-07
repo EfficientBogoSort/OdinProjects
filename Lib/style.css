@@ -30,7 +30,7 @@ html, body{
 
 #colTitle, .book{
     display: grid;
-    grid-template-columns: 40% 40% 1fr 1fr;
+    grid-template-columns: 35% 35% 1fr 1fr 1fr 1fr;
     padding: 0 2%;
     align-items: center;
     justify-items: start;
@@ -88,6 +88,10 @@ input[type="text"], input[type="number"]{
 form>div{
     width: 50%;
 }
-input[type="number"]:disabled{
+#pagesRead:disabled{
     background-color: grey;
+}
+
+.book{
+    text-transform: capitalize;
 }
